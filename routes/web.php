@@ -20,3 +20,13 @@ $router->get('/', function () use ($router) {
 $router->get('/key', function() {
     return \Illuminate\Support\Str::random(32);
 });
+
+// $router->get('/registrants', '\App\Http\Controllers\RegistrantController@index');
+
+$router->group(['prefix' => 'api/'], function() use($router){
+    $router->get('registrants', 'RegistrantController@index');
+    $router->post('registrant', 'RegistrantController@create');
+    $router->get('registrant/{id}', 'RegistrantController@show');
+    $router->put('registrant/{id}', 'RegistrantController@update');
+    $router->delete('registrant/{id}', 'RegistrantController@destroy');
+});
