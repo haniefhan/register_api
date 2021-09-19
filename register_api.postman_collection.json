@@ -127,7 +127,7 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8000/api/registrant/",
+					"raw": "http://localhost:8000/api/registrant/11",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -136,7 +136,7 @@
 					"path": [
 						"api",
 						"registrant",
-						""
+						"11"
 					]
 				}
 			},
