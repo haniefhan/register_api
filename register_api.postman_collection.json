@@ -1,0 +1,146 @@
+{
+	"info": {
+		"_postman_id": "c8ff8739-f26d-4a61-b4d3-5ef5692cbd5e",
+		"name": "Register API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Registrant Data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/registrants",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"registrants"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Insert New Registrant Data",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Furman Pouros MD",
+							"type": "text"
+						},
+						{
+							"key": "id_card_number",
+							"value": "4253114757276124",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "33148 Moore Fall Apt. 122\\nPort Havenport, MD 10424",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "+1-223-996-0075",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/registrant",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"registrant"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get One Registrant Data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/registrant/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"registrant",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Registrant Data",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Prof. Glen Grimes II\",\r\n    \"id_card_number\": \"5160201003975662\",\r\n    \"address\": \"518 Roderick Mission Apt. 997\\nPowlowskimouth, AL 89818-6209\",\r\n    \"phone\": \"1-317-243-1855\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/registrant/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"registrant",
+						"5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Registrant Data",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/api/registrant/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"registrant",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
